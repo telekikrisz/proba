@@ -1,0 +1,29 @@
+@cim=http://localhost:3000/
+
+### Összes tanuló GET
+GET http://localhost:3000/tanulok
+
+### változóval
+GET {{cim}}tanulok
+
+### adat hozzáadása POST
+
+post {{cim}}tanulok
+Content-Type: application/json
+
+{
+    "nev":"Kis Aladár",
+    "szak":"szoftverfejlesztő"
+}
+
+### Tanuló adatainak módosítása (PUT)
+PUT {{cim}}tanulok/1
+Content-Type: application/json
+
+{
+  "nev": "Kovács Péter",
+  "szak": "vendéglátás"
+}
+
+### Tanuló törlése (DELETE)
+DELETE {{cim}}tanulok/7
